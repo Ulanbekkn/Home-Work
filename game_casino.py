@@ -1,7 +1,8 @@
 from random import randint, choice
+from decouple import config
 
 def casino():
-    my_money = 1000
+    my_money = config("MY_MONEY", cast=int)
     digit_win = randint(1, 30)
 
     while True:
